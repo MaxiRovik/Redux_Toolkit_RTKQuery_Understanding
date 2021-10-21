@@ -1,4 +1,4 @@
-import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query";
+import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/dist/query/react";
 
 
 export const postAPI = createApi({
@@ -9,3 +9,4 @@ export const postAPI = createApi({
         fetchAllPosts: build.query({query: () => ({url: '/posts'})})
     })
 })
+
