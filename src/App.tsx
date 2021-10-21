@@ -1,8 +1,9 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import './App.css';
-import {useAppDispatch, useAppSelector} from "./hooks/redux";
-import {userSlice} from "./store/reducers/UserSlice";
-import {fetchUsers} from "./store/reducers/ActionCreators";
+import PostContainer from "./components/PostContainer";
+import PostContainer2 from "./components/PostContainer2";
+
+
 
 
 function App() {
@@ -18,6 +19,10 @@ function App() {
       {/*{isLoading && <h1>Loading...</h1>}*/}
       {/*{error && <h1>{error}</h1>}*/}
       {/*  {JSON.stringify(users, null,1)}*/}
+        <div style = {{display: "flex", flexDirection: "row"}}>
+            <PostContainer/>
+            <PostContainer2/>
+        </div>
 
     </div>
   );
