@@ -6,18 +6,18 @@ import {fetchUsers} from "./store/reducers/ActionCreators";
 
 
 function App() {
-  const {users, isLoading, error} = useAppSelector(state => state.userReducer)
-  const dispatch = useAppDispatch()
-
-    useEffect(()=> {
-        dispatch(fetchUsers())
-    },[])
+  // const {users, isLoading, error} = useAppSelector(state => state.userReducer)
+  // const dispatch = useAppDispatch()
+  //
+  //   useEffect(()=> {
+  //       dispatch(fetchUsers())
+  //   },[])
 
   return (
     <div className="App">
-      {isLoading && <h1>Loading...</h1>}
-      {error && <h1>{error}</h1>}
-        {JSON.stringify(users, null,1)}
+      {/*{isLoading && <h1>Loading...</h1>}*/}
+      {/*{error && <h1>{error}</h1>}*/}
+      {/*  {JSON.stringify(users, null,1)}*/}
 
     </div>
   );
