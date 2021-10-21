@@ -5,9 +5,10 @@ import {IPost} from "../models/IPost";
 
 const PostContainer :FC = () => {
     const [limit, setLimit] = useState(1)
-    // const {data,  isLoading} = postAPI.useFetchAllPostsQuery(20);
-    const {data,  isLoading, error, refetch} = postAPI.endpoints.fetchAllPosts.useQuery(limit, /*{pollingInterval: 1000}*/)
-    const [createPost, {}] = postAPI.useCreatePostMutation()
+    const {data,  isLoading, error, refetch} = postAPI.useFetchAllPostsQuery(limit, /*{pollingInterval: 1000}*/)
+    const [createPost, {error: postError, isLoading: postIsLoading}] = postAPI.useCreatePostMutation()
+    const [updatePost, {}] = postAPI.useUpdatePostMutation()
+    const [deletePost, {}] = postAPI.useDeletePostMutation()
 
     useEffect (() => {
         setTimeout(() => {setLimit(25)},3000)
@@ -16,6 +17,14 @@ const PostContainer :FC = () => {
     const handleCreate = async () => {
         const title = prompt()
         await createPost({title, body: title} as IPost)
+    }
+
+    const removeItem = (post:IPost) => {
+         deletePost(post)
+        }
+
+    const updateItem = (post:IPost) => {
+        updatePost(post)
     }
 
     return (
@@ -31,7 +40,7 @@ const PostContainer :FC = () => {
             <div className = "post__list">
 
                 {data && data.map(post =>
-                <PostItem key ={post.id} post = {post}/>)}
+                <PostItem   key = {post.id} post = {post} remove={removeItem} update={updateItem}/>)}
             </div>
         </div>
     );

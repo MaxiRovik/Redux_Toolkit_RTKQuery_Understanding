@@ -1,54 +1,9 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "json-server",
-      "body": "typicode"
-    },
-    {
-      "id": 2,
-      "title": "json-server",
-      "body": "typicode"
-    },
-    {
-      "id": 3,
-      "title": "json-server",
-      "body": "typicode"
-    },
-    {
-      "id": 4,
-      "title": "json-server",
-      "body": "typicode"
-    },
-    {
-      "id": 5,
-      "title": "json-server",
-      "body": "typicode"
-    },
-    {
-      "id": 6,
-      "title": "json-server",
-      "body": "typicode"
-    },
-    {
-      "id": 7,
-      "title": "json-server",
-      "body": "typicode"
-    },
-    {
-      "title": "created new post",
-      "body": "created new post",
-      "id": 8
-    },
-    {
-      "title": "created second new post",
+      "title": "asasasasasa",
       "body": "created second new post",
       "id": 9
-    },
-    {
-      "title": "NEW NEW POST",
-      "body": "NEW NEW POST",
-      "id": 10
     },
     {
       "title": "NEW",
@@ -56,7 +11,7 @@
       "id": 11
     },
     {
-      "title": "NEW POST AFTER RESET",
+      "title": "asasasas",
       "body": "NEW POST AFTER RESET",
       "id": 12
     },
@@ -71,13 +26,7 @@
       "id": 14
     }
   ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
+  "comments": [],
   "profile": {
     "name": "typicode"
   }

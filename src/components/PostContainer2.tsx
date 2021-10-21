@@ -11,8 +11,8 @@ const PostContainer2 :FC = () => {
             {isLoading  && <h1>Loading... </h1>}
             {error  && <h1>error</h1>}
             <div className = "post__list">
-                {data && data.map(post =>
-                <PostItem key ={post.id} post = {post}/>)}
+                {/*{data && data.map(post =>*/}
+                {/*<PostItem key ={post.id} post = {post}/>)}*/}
             </div>
         </div>
     );
