@@ -8,6 +8,7 @@ export const postAPI = createApi({
         baseUrl:
             'http://localhost:4000'
     }),
+    tagTypes: ['Post'],
     endpoints: (build) => ({
         fetchAllPosts: build.query<IPost[], number>({
             query: (limit = 1) => ({
@@ -15,14 +16,17 @@ export const postAPI = createApi({
                 params: {
                     _limit: limit
                 }
-            })
+            }),
+            providesTags: result => ['Post']
         }),
+
         createPost: build.mutation<IPost, IPost>({
             query: (post) => ({
                 url: '/posts',
                 method: "POST",
                 body: post
-            })
+            }),
+            invalidatesTags: ['Post']
         })
     })
 })

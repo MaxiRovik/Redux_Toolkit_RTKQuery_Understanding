@@ -44,6 +44,31 @@
       "title": "created second new post",
       "body": "created second new post",
       "id": 9
+    },
+    {
+      "title": "NEW NEW POST",
+      "body": "NEW NEW POST",
+      "id": 10
+    },
+    {
+      "title": "NEW",
+      "body": "NEW",
+      "id": 11
+    },
+    {
+      "title": "NEW POST AFTER RESET",
+      "body": "NEW POST AFTER RESET",
+      "id": 12
+    },
+    {
+      "title": "ADD",
+      "body": "ADD",
+      "id": 13
+    },
+    {
+      "title": "ADDDDDDDDDDD",
+      "body": "ADDDDDDDDDDD",
+      "id": 14
     }
   ],
   "comments": [

@@ -10,7 +10,7 @@ const PostContainer :FC = () => {
     const [createPost, {}] = postAPI.useCreatePostMutation()
 
     useEffect (() => {
-        setTimeout(() => {setLimit(10)},3000)
+        setTimeout(() => {setLimit(25)},3000)
     },[])
 
     const handleCreate = async () => {
@@ -20,7 +20,7 @@ const PostContainer :FC = () => {
 
     return (
         <div>
-            <button onClick = {()=>refetch()} style = {{background:"lightblue"}}>
+            <button onClick = {() => refetch()} style = {{background:"lightblue"}}>
                 Refresh
             </button>
             <button onClick = {handleCreate} style = {{background:"lightgreen"}}>
